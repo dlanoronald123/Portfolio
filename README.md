@@ -1,2 +1,45 @@
 # batch6-activities
 Repository of activities for Batch 6
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+	
+		 <style>
+            
+			body {background:url("practice.jpg")}
+			h1 {text-align: center;}
+            h1 {background-color:rgb(248, 14, 14);}
+			h1 {color:whitesmoke}
+			h3 {text-align:center ;}
+		
+       
+			div {
+ 	 			width: 700px;
+  				border: 30px solid rgb(63, 48, 6);
+  				padding: 5px;
+				margin: auto;
+				text-align: justify;
+				}
+		</style>
+		
+		<title>Keep practicing, growing and improving!:bowtie:</title> 
+	</head>
+	<body> 	
+		<div>
+		<h1><strong>Keep practicing, growing and improving!🙂</strong> </h1>
+		<h2><em>To keep learning every tiny second of time, you have to challenge your 
+			capabilities. Take a project, study on yourself, try coding challenges on the web.
+			Remember, practice makes perfect.</em> </h2>
+
+		</div>
+		
+		<h3><i>Always keep on <a href = https://www.codingdojo.com/blog/web-development-best-practices>PRACTICING.</i></a></h3>
+	
+		
+
+
+	
+	</body>
+</html>
