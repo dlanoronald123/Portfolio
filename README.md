@@ -7,15 +7,15 @@
 	
 		 <style>
             
-			body {background:url("practice.jpg")}
+			body {background-color: lightgreen}
 			h1 {text-align: center;}
-            h1 {background-color:rgb(248, 14, 14);}
+                        h1 {background-color:rgb(248, 14, 14);}
 			h1 {color:whitesmoke}
 			h3 {text-align:center ;}
 		
        
 			div {
- 	 			width: 700px;
+ 	 			width: 900px;
   				border: 30px solid rgb(63, 48, 6);
   				padding: 5px;
 				margin: auto;
