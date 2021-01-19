@@ -1,5 +1,4 @@
-# batch6-activities
-Repository of activities for Batch 6
+
 <!DOCTYPE HTML>
 
 <html>
