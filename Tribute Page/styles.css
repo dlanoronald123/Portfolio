@@ -1,0 +1,186 @@
+
+
+
+body {
+    background: url(lee.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding:0;
+    margin:0;
+    
+}
+
+
+#main {
+    max-width: 1000px;
+    margin: auto;
+    padding:1px 5px;
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 50px;
+    font-family: 'Carter One', serif;
+    margin: 0;
+}
+.subtitle {
+    text-align:left;
+    color:#903;
+    float:center;
+    font-size: 7em;
+    margin: 0px;
+    padding:0;
+    vertical-align: text-top;
+    font-family: 'Bebas Neue', serif;
+    font-weight:700;   
+}
+#tribute-info{
+    font-size:20px;
+    font-family: 'Glegoo',serif;
+    position: left;
+    line-height:.1;
+}
+
+#img-div > img:hover {
+    transform: scale(1.1);
+}
+
+
+#img-div > img {
+    border-radius: 3rem;
+    transition: 1s;
+    position: center;
+    width: 100%;
+    
+}
+
+#img-div1 > img:hover {
+    transform: scale(1.1);
+}
+
+
+#img-div1 > img {
+    border-radius: 10rem;
+    transition: 1s;
+    width: 100%;
+    position: center;
+    width: 100%;
+    opacity: .8;
+    
+}
+#img-caption{
+    font-size:15px;
+    padding:100;
+    font-family: 'Glegoo',serif;
+    position: left;
+    line-height:.1;
+}
+
+figcaption{
+    bottom:320px;
+    font-family: 'Acme',serif;
+    right:840px;
+    font-size: 20px;
+    position:absolute;
+    color:rgb(8, 8, 8);
+    max-width:34%;
+    text-align:left;
+}
+
+img {
+    position: center;
+    max-width: 94%;
+    max-height: 10%;
+    min-height: 10px;
+    margin: 10px;
+    background-color: rgb(19, 13, 13); 
+}
+
+blockquote{
+    text-align:center;
+    width: 94%;
+    padding:4px;
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Acme',serif;
+    color: rgb(233, 17, 17);
+    }
+
+blockquote:before {
+    content: open-quote;
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: 0.1em;
+    vertical-align: -0.4em;
+    }
+
+blockquote:after {                                                       
+    content: close-quote;
+    vertical-align: bottom;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    }
+blockquote p {
+    display: inline;
+    }
+
+p {
+    max-width: 1000px;
+    margin:auto;
+    
+}
+
+img.one {
+    height: 20%;
+    width: 50%;
+    float: right;
+    padding: 2px;
+    margin-left:.3px;
+  }
+
+.paragraph,ul {
+    font-size:20px;
+    font-family: 'Glegoo',serif;
+    position: left;
+}
+
+
+
+a.tribute-link:hover {
+        color: black;
+        }
+
+a.tribute-link:hover {
+        color: red;
+        }
+
+
+        
+h2{
+    max-width: 750px;
+    margin: 30px auto 10px auto;
+    font-family: 'Glegoo',serif;
+}
+
+footer{
+    max-width:900px;
+
+    font-family: 'Bebas Neue', serif;
+    text-align:left;
+    font-size: 30px;
+}
+
+footer a{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+
+footer a:hover {
+    color: red;
+    }
