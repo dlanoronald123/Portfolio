@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/033affd47f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+    <video autoplay muted loop id="myVideo">
+        <source src="bg2.mp4" type="video/mp4">
+    </video>
+</head>
+
+<body>
+    
+
+    <section class="container">
+        <div>
+            <h1 id="title">avion school</h1>
+            <p id="description"><strong>Survey Form</strong></p>
+        </div>
+        <form action="https://avionschool.com/" id="survey-form" class="rounded-form" method="get" target="_blank">
+            <div class="form-floating">
+                <label for="name" id="name-label"> Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-floating">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-floating">
+                <label for="number" id="number-label">Age</label>
+                <input type="number" id="number" class="form-control" placeholder="Enter your Age" min="1" max="100" required>
+            </div>
+            <div class="form-floating drop">
+                <label for="role">Which option best describes your current role?</label>
+                <select class="form-select" id="dropdown" name="role">
+                    <option value="student">Student</option>
+                    <option value="employee">Employee (Full-time)</option>
+                    <option value="employee">Employee (Part-time)</option>
+                    <option value="learner">Bussiness Owner</option>
+                    <option value="other">Others</option>
+                </select>
+            </div>
+            <div class="drop">
+                <label for="recommend">Would you recommend Avion School to a friend?</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="rb" id="radio" value="radiovalue" class="form-check-input" checked>
+                <label for="recommend" class="form-check-label">
+                    Definitely
+                </label>
+            </div>
+            <div class="form-check middle">
+                <input type="radio" name="rb" id="radio" value="radiovalue" class="form-check-input">
+                <label for="recommend" class="form-check-label">
+                    Maybe
+                </label>
+            </div>
+            <div class="form-check middle">
+                <input type="radio" name="rb" id="radio" value="radiovalue" class="form-check-input">
+                <label for="recommend" class="form-check-label">
+                    Not Sure
+                </label>
+            </div>
+            <div class="form-floating drop">
+                <label for="feature">What is your favorite feature of Avion School?</label>
+                <select class="form-select" id="feature" name="feature">
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="open-source">Open Source Community</option>
+                </select>
+            </div>
+            <div class="drop">
+                <label for="recommend">What would you like to see improved?</label>
+            </div>
+            <div class="form-check box">
+                <input type="checkbox" id="frontend" value="frontendproj" class="form-check-input">
+                <label for="frontendproj" class="form-check-label">
+                    Front-end Projects
+                </label>
+            </div>
+            <div class="form-check box">
+                <input type="checkbox" id="backend" value="backendproj" class="form-check-input">
+                <label for="backendproj" class="form-check-label">
+                    Back-end Projects
+                </label>
+            </div>
+            <div class="form-check box">
+                <input type="checkbox" id="challenges" value="challenges" class="form-check-input">
+                <label for="challenges" class="form-check-label">
+                    Challenges
+                </label>
+            </div>
+            <div class="form-check box">
+                <input type="checkbox" id="forum" value="forum" class="form-check-input">
+                <label for="forum" class="form-check-label">
+                    Forum
+                </label>
+            </div>
+            <div class="form-check box">
+                <input type="checkbox" id="courses" value="courses" class="form-check-input">
+                <label for="courses" class="form-check-label">
+                    Additional Courses
+                </label>
+            </div>
+            <div class="drop">
+                <label for="recommend">Feedback</label>
+            </div>
+            <div>
+                <textarea id="textArea" cols="30" rows="5" class="form-control text-area" placeholder="Put your comments or suggestions here."></textarea>
+                <label for="textArea"></label>
+            </div>
+            <div class="button">
+                <button class="btn" type="submit" id="submit">
+                    Submit
+                </button>
+            </div>
+        </form>  
+        <div class="foot">
+            <a href="https://github.com/avionschool"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/school/avion-school/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/avionschool/"><i class="fab fa-facebook"></i></a>
+            <p id="footer">© Avion School 2021</p>
+        </div>
+    </section>
+    
+</body>
+    
+            
+        
+</html>

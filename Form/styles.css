@@ -1,0 +1,207 @@
+
+/*
+html, body {
+  
+    overflow-x: hidden; 
+    background: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding:0;
+    margin:0;
+}*/
+
+video{
+    position: absolute;
+    width: 100%;
+    height: 200%;
+}
+#myVideo {
+    position: fixed;
+    margin:auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;   
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Saira Condensed', sans-serif;
+    
+}
+
+h1{
+    margin-bottom: 0;
+    text-align: left;
+    font-family: Poppins;
+    color: rgb(182, 45, 45);
+}
+
+p {
+    margin-top: 0;
+    font-size:30px;
+    text-align: left;
+    font-weight: 500;
+    padding:-20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-size:25px;
+    font-weight: 900;
+    margin-bottom: .75rem;
+}
+
+button, input, select, textarea {
+    margin: 0;
+    font-family: inherit;
+}
+
+
+.container{
+    position: relative;
+    border-radius: 2px;
+    border-radius:1rem;
+    transition: 1s;
+}
+ 
+.container:hover {
+    transform: scale(1.03);
+}
+/*
+.container {
+    border-radius:1rem;
+    transition: 1s;
+    position: center;
+    width: 30%; 
+    filter: blur(.1px);
+    background: inherit; 
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+}
+*/
+.container {
+    margin: 1;
+    text-align: center;
+    font-size: 2rem;
+    width: 40%;
+    margin-right:55%;
+    margin-left: auto!important;
+    z-index: 0;
+}
+
+#survey-form {
+    padding: 1.5rem;
+    background-color: rgb(182, 45, 45);
+    border-radius: 1.5rem!important;
+    opacity:  .9;
+}
+
+.form-floating {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.form-floating > .form-control, .form-floating > .form-select {
+    height: calc(3.5rem + 1px);
+    padding: .8rem .8rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #00080f;
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+    border: 1px solid #328ce6;
+    appearance: none;
+    border-radius: 1rem;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    border-radius: .25rem;
+}
+
+.drop {
+    margin-top: 2rem;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0;
+    text-align: left!important;
+    margin-bottom: .5rem!important;
+    margin-top: 1rem;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: .50em;
+    vertical-align: top;
+}
+
+.form-check-label {
+    display: inline-block;
+    margin-left: .50em;
+    font-weight: 300!important;
+}
+
+.middle, .box {
+    margin-top: -.75em;
+}
+
+.text-area {
+    padding: .375rem .75rem;
+}
+
+.button {
+    margin-top: 1em;
+    margin-right: 85%;
+}
+
+.btn {
+    color: white;
+    background-color: #0a8806;
+    border-color:rgb(182, 45, 45);
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+}
+.foot {
+   
+    padding: 1rem;
+    margin-top:1rem;
+    overflow: visible;
+    text-align: left;
+    margin-right: 17%;
+    margin-left: auto!important;
+}
+.foot p {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;   
+}
+
+i {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-left: .5em;
+}
+
