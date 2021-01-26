@@ -1,16 +1,4 @@
 
-/*
-html, body {
-  
-    overflow-x: hidden; 
-    background: url(bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding:0;
-    margin:0;
-}*/
 
 video{
     position: absolute;
@@ -34,22 +22,25 @@ video{
 
 body {
     font-family: 'Saira Condensed', sans-serif;
+}
+
+image {
+    float: left;
     
 }
 
 h1{
-    margin-bottom: 0;
-    text-align: left;
     font-family: Poppins;
     color: rgb(182, 45, 45);
+    float :right;
 }
 
-p {
-    margin-top: 0;
+p { 
+   position: absolute;
+    line-height: 1px;
+    height: 2px;
     font-size:30px;
-    text-align: left;
-    font-weight: 500;
-    padding:-20px;
+    left:370px;
 }
 
 label {
@@ -73,7 +64,8 @@ button, input, select, textarea {
     border-radius:1rem;
     transition: 1s;
 }
- 
+
+
 .container:hover {
     transform: scale(1.03);
 }
@@ -93,7 +85,7 @@ button, input, select, textarea {
     text-align: center;
     font-size: 2rem;
     width: 40%;
-    margin-right:55%;
+    margin-right:50%;
     margin-left: auto!important;
     z-index: 0;
 }
@@ -190,17 +182,14 @@ button, input, select, textarea {
     padding: 1rem;
     margin-top:1rem;
     overflow: visible;
-    text-align: left;
-    margin-right: 17%;
+    text-align: center;
+    margin-right: 10%;
     margin-left: auto!important;
 }
-.foot p {
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;   
-}
+
 
 i {
-    color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
     font-size: 2rem;
     margin-left: .5em;
 }
