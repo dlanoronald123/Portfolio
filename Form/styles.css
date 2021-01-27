@@ -1,5 +1,4 @@
 
-
 video{
     position: absolute;
     width: 100%;
@@ -18,6 +17,7 @@ video{
   
 * {
     box-sizing: border-box;
+    padding:0;
 }
 
 body {
@@ -48,96 +48,105 @@ label {
     text-align: left;
     color: rgb(0, 0, 0);
     font-size:25px;
-    font-weight: 900;
-    margin-bottom: .75rem;
+    font-weight: 700;
 }
 
 button, input, select, textarea {
-    margin: 0;
+    margin: 1;
     font-family: inherit;
 }
 
-
-.container{
-    position: relative;
-    border-radius: 2px;
-    border-radius:1rem;
-    transition: 1s;
-}
-
-
-.container:hover {
-    transform: scale(1.03);
-}
-/*
 .container {
-    border-radius:1rem;
-    transition: 1s;
-    position: center;
-    width: 30%; 
-    filter: blur(.1px);
-    background: inherit; 
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
-}
-*/
-.container {
-    margin: 1;
+    margin: auto;
     text-align: center;
     font-size: 2rem;
     width: 40%;
+    margin-right:30%;
+    position: relative;
+    transition: 1s;
+}
+
+
+.container1 {
+    margin: auto;
+    text-align: left;
+    font-size: 2rem;
+    width: 50%;
     margin-right:50%;
-    margin-left: auto!important;
-    z-index: 0;
+    position: relative;
+    transition: 1s;
+    padding: 20px;
+}
+.img{
+   position: relative;
+   width: 25%;
+    margin-right:10%;
 }
 
 #survey-form {
-    padding: 1.5rem;
-    background-color: rgb(182, 45, 45);
+    padding: 2rem;
+    background-color: rgb(182, 45, 45, .8);
     border-radius: 1.5rem!important;
-    opacity:  .9;
 }
 
 .form-floating {
+    width: 100%;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
-.form-floating > .form-control, .form-floating > .form-select {
-    height: calc(3.5rem + 1px);
+.form-floating:hover {
+    transform: scale(1.08);
+    transition: .7s;
+}
+
+.text-area:hover {
+    transform: scale(1.08);
+    transition: .7s;
+}
+
+.form-floating > .form-control, .form-floating {
+    height: calc(2.5rem);
     padding: .8rem .8rem;
 }
 
 .form-control {
+    position:relative;
+    left:100px;
+    top: -40px;
     display: block;
-    width: 100%;
+    width: 80%;
     font-size: 1rem;
-    font-weight: 500;
-    line-height: 1;
+    font-weight: 700;
     color: #00080f;
     background-color: rgb(255, 255, 255);
-    background-clip: padding-box;
-    border: 1px solid #328ce6;
-    appearance: none;
-    border-radius: 1rem;
+    border: 2px solid #328ce6;
+    border-radius: 2rem;
 }
 
 .form-select {
+    height: calc(2.5rem);
+    padding: 1;
     display: block;
     width: 100%;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 4;
     color: #212529;
-    border-radius: .25rem;
+    border: 2px solid #328ce6;
+    font-weight: 700;
+    border-radius: .5rem;
 }
 
 .drop {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    height: calc(2rem);
+    padding: .8rem .8rem;
 }
 
 .form-check {
     display: block;
-    min-height: 1.5rem;
-    padding-left: 0;
+    padding-left: 10px;
     text-align: left!important;
     margin-bottom: .5rem!important;
     margin-top: 1rem;
@@ -145,7 +154,7 @@ button, input, select, textarea {
 
 .form-check-input {
     width: 1.5em;
-    height: 1.5em;
+    height: 3em;
     margin-top: .50em;
     vertical-align: top;
 }
@@ -161,12 +170,25 @@ button, input, select, textarea {
 }
 
 .text-area {
+    position:relative;
+    left:10px;
+    top: -40px;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #00080f;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #328ce6;
+    border-radius: 2rem;
     padding: .375rem .75rem;
+    resize:none;
+    margin-bottom: -3rem;
 }
 
 .button {
     margin-top: 1em;
-    margin-right: 85%;
+    margin-right:3%;
 }
 
 .btn {
@@ -176,21 +198,19 @@ button, input, select, textarea {
     padding: .375rem .75rem;
     border-radius: .25rem;
     font-size: 1rem;
+  
 }
 .foot {
-   
     padding: 1rem;
     margin-top:1rem;
     overflow: visible;
     text-align: center;
-    margin-right: 10%;
+    margin-right: 4%;
     margin-left: auto!important;
 }
-
 
 i {
     color: rgb(253, 253, 253);
     font-size: 2rem;
     margin-left: .5em;
 }
-
