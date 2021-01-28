@@ -1,0 +1,38 @@
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .b1 {
+    width: 5vw;
+    height: 5vw;
+    background-position: center;
+    background-size: cover;
+    background: white;
+    text-align: center;
+    font-size: 4vw;
+    border: black 2px solid;
+  }
+  
+  .b2 {
+    width: 5vw;
+    height: 5vw;
+    background-color: #047c00;
+    text-align: center;
+    font-size: 4vw;
+    border: black 2px solid;
+  }
+
+  h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:50px;
+    font-weight: 700;
+    text-align: center;
+ }
+ *{
+     background-color: rgb(96, 97, 95);
+ }
