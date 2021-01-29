@@ -87,10 +87,11 @@
 /* Image */
 
 	.image {
-		border-radius: 0.15em;
 		border: 20px;
 		display: inline-block;
 		position: relative;
+		border-radius: 10%;
+		background-image: var("images/practicep.jpg"), linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
 	}
 
 			.image.avatar img {
@@ -111,7 +112,6 @@
 		background-attachment: scroll;	
 		background-repeat: repeat;
 		flex-direction: column;
-		background-image: url(images/bg2.jpg);
 		background-size: 100%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
@@ -121,6 +121,7 @@
 		text-align: right;
 		top: 0;
 		width: 35%;
+		border-right: 3px solid;
 	}
 		
 		#header strong{
@@ -152,7 +153,7 @@
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
+			margin: 4em 0 0 10;
 			padding: 4em 0 0 0;
 		}
 
