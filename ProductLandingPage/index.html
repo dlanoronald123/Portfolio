@@ -12,16 +12,15 @@
     <title>REACT</title>
     <link rel="shortcut icon" href="og.jpg" type="image/x-icon">
 </head>
-<header>
-  
+<header id="header">
     <nav id= "nav-bar">
         <div class="container">
-            <img src="https://www.transparentpng.com/thumb/nike-logo/BC26mv-nike-logo-free-cut-out.png" id="logo">
+            <img src="https://www.transparentpng.com/thumb/nike-logo/BC26mv-nike-logo-free-cut-out.png" id="header-img">
             <ul class="nav">
-                <li><a href="https://www.nike.com" target="_blank" class="link">Shop</a></li>
-                <li><a href="#newsletter-page" class="link">Sign Up</a></li>
+                <li><a href="https://www.nike.com" target="_blank" class="nav-link">Shop</a></li>
+                <li><a href="#newsletter-page" class="nav-link">Sign Up</a></li>
                 <li class="nav-item has-dropdown">
-                  <a href="#" class="link">Theme</a>
+                  <a href="#" class="nav-link">Theme</a>
                   <ul class="dropdown">
                     <li class="dropdown-item">
                       <a id="light" href="#"></a>
@@ -45,7 +44,15 @@
                 <h2 data-aos="fade-down" ><em>Level up your GAME.</em></h2>
                  
             </div>  
-            <a href="#review-page" class="btn" >Learn More</a>     
+
+            <a href="#review-page" class="btn" >Learn More</a>
+            <div class="content">
+              <a  href="#review-page" id="scrollIndicator" class="scrollIndicator">
+                <i></i>
+              </a>
+            </div>
+
+               
    </section>
    <section id="review-page">
     <div class="review-content" data-aos="fade-down">
@@ -204,7 +211,7 @@
           <form action="newsletter.html" method="get">
             <br />
             <div class="formbar">
-              <input type="email" id="email" name="email" placeholder="Enter valid email" required/>
+              <input type="email" id="email" name="email input field" placeholder="Enter valid email" required/>
             </div>
             <br />
             <input id="submit" type="submit" value="Submit" required />
