@@ -3,7 +3,6 @@ const nextBtn = document.querySelector('#btnnext');
 const gameStatus = document.querySelector('.gamestats');
 const cells = document.querySelectorAll('.cell');
 let counter = 0;
-var forward = 0;
 let currentIndex;
 let game = true;
 let Player = "X";
@@ -102,7 +101,7 @@ that are still not populated with a player sign
 }
 function handleCellClick(clickedCellEvent) {
     counter +=1
-    // console.log(counter);
+    console.log(counter);
     //We will save the clicked html element in a variable for easier further use
     const clickedCell = clickedCellEvent.target;
   /*
@@ -144,7 +143,7 @@ function btnPrev() {
     if (currentIndex <= 0) {
         currentIndex = 0;
     }
-    traverseHistory(history[currentIndex]);
+    Course(history[currentIndex]);
     console.log('Nagprevious ka Bes');
    /* history[4-1].forEach(h => {
         h.map(j => {
@@ -159,10 +158,10 @@ function btnNext() {
     if (currentIndex >= history.length - 1) {
         currentIndex = history.length - 1;
     }
-    traverseHistory(history[currentIndex]);
+    Course(history[currentIndex]);
     console.log("Nagnext ka Bes");
 }
-function traverseHistory(arr) {
+function Course(arr) {
     for (let i=0; i<3; i++) {
         for (let j=0; j<3; j++) {
             if (i === 0) {
@@ -182,7 +181,7 @@ function traverseHistory(arr) {
                 }
                 else if (arr[i][j] === "O") {
                     cells[i+j+2].innerHTML = "O";
-                }
+                }   
                 else {
                     cells[i+j+2].innerHTML = "";   
                 }
@@ -203,46 +202,44 @@ function traverseHistory(arr) {
         }
     }
 }
- 
+    //console.log(i);
+    /*
+    prevBtn.addEventListener('click', function(){
+    var i = 2;
+        //if(history[0].style.visibility == 'hidden'){
+            //this.style.visibility = 'hidden';
+        //}
+        //else{
+            //nextBtn.style.visibility = "visible";
+            console.log(history[history.length - i]);
+            i++;
+            
+        }
+    );
+    nextBtn.addEventListener('click', function(){
+        //if(history[history.length - i].style.visibility == 'visible'){
+        //    this.style.visibility = 'hidden';
+        //}
+        //else{
+            //prevBtn.style.visibility = "visible";
+            //this.style.visibility= 'visible';
+            history[history.length - i].style.visibility = 'visible';
+            console.log(history[history.length - i]);
+            i--;
+        }
+    );
+/*
+function btnNxt(){
+    var i = 1;
+    nextBtn.addEventListener('click', function(){
+          
+      gameRecord.length+i;
+      console.log(history[history.length + i]);
+      i++;
+    });
+}*/
 
 //Event Listeners
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('#restart').addEventListener('click', restartEvent);
-document.querySelector('#btnnext').addEventListener('click', btnNext);  
-
-//console.log(i);
-/*
-prevBtn.addEventListener('click', function(){
-var i = 2;
-    //if(history[0].style.visibility == 'hidden'){
-        //this.style.visibility = 'hidden';
-    //}
-    //else{
-        //nextBtn.style.visibility = "visible";
-        console.log(history[history.length - i]);
-        i++;
-        
-    }
-);
-nextBtn.addEventListener('click', function(){
-    //if(history[history.length - i].style.visibility == 'visible'){
-    //    this.style.visibility = 'hidden';
-    //}
-    //else{
-        //prevBtn.style.visibility = "visible";
-        //this.style.visibility= 'visible';
-        history[history.length - i].style.visibility = 'visible';
-        console.log(history[history.length - i]);
-        i--;
-    }
-);
-/*
-function btnNxt(){
-var i = 1;
-nextBtn.addEventListener('click', function(){
-      
-  gameRecord.length+i;
-  console.log(history[history.length + i]);
-  i++;
-});
-}*/
+document.querySelector('#btnnext').addEventListener('click', btnNext)   ;
