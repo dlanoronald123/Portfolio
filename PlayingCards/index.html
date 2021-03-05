@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>♠ ♥ ♣ </title>
+    <style>
+        html { 
+            background: url(bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+
+            h1{
+            font-family: 'Roboto', sans-serif;
+            font-size:60px;
+            font-weight: 900;
+            text-align: center;
+            color: rgb(165, 165, 165);
+            text-shadow: -1px 0 black, 0 2px black, 5px 0 black, 0 -1px black;
+            }
+            h2{
+            font-family: 'Roboto', sans-serif;
+            font-size:30px;
+            font-weight: 900;
+            text-align: center;
+            color: rgb(165, 165, 165);
+            text-shadow: -1px 0 black, 0 2px black, 5px 0 black, 0 -1px black;
+            }
+            .container {  
+            display: flex;  
+            flex-direction: column;
+            justify-content: center;  
+            align-items: center;  
+            width: auto;  
+            height: auto;   
+            }  
+            button {  
+            background-color:  rgb(165, 165, 165);
+            font-family: 'Roboto', sans-serif;
+            color: rgba(0, 0, 0, 0.932);  
+            font-size: 20px;  
+            margin: 10px;  
+            width: 180px;
+            }  
+    </style>
+</head>
+<body>
+    <h1>Playing Cards</h1>
+    <h2>Go to console to see the result Bes</h2>
+    <div class="container">  
+    <button onclick="showDeck(deck)">Show Deck</button>
+    <button onclick="shuffleDeck(shuffle)">Shuffle</button>
+    <button onclick="arrangeBySuit(shuffle)">Arrange by Suit</button>
+    <button onclick="arrangeByValue(shuffle)">Arrange by Value</button>
+    <button id="deal" onclick="deal()">Deal One Card</button>
+    <button id="deal" onclick="dealFive()">Deal Five Cards</button>
+    <button onclick="reset()">Reset</button>
+    </div>
+<script src="card.js" defer></script>
+
+</body>
+</html>
