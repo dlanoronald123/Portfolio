@@ -4,11 +4,16 @@ const suits = ["♠", "♡", "♢", "♣"];
 const deck = [];
 let shuffle = [];
 
+
+
+
 for (let suit = 0; suit < suits.length; suit++) {
 	for (let value = 0; value < values.length; value++) {
   	deck.push(suits[suit] + values[value]);
   }
 }
+//console.log(deck);
+
 
 function showDeck(){
   console.log(`Deck: ${deck}`);
@@ -16,11 +21,26 @@ function showDeck(){
 
 
 
+function shuffleDeck() {
+  shuffle = deck.slice();
+  for (let i = 0; i < shuffle.length; i++) {
+    // Get random number to make new position for each card in deck
+    let random = Math.floor(Math.random() * shuffle.length);
+    // Swap pos
+    swapCard = shuffle[i];
+    shuffle[i] = shuffle[random];
+    shuffle[random] = swapCard;
+  }
+    //console.log(shuffle);
+    console.log(`Shuffled Deck: ${shuffle}`);
+}
 
 function arrangeBySuit(){
 	let arrange = shuffle.slice(0);
   arrange.sort();
+  //console.log(arrange);
   console.log(`Arranged by Suit: ${arrange}`);
+  return;
 }
 
 
@@ -117,64 +137,34 @@ function arrangeByValue(shuffle){
       ten.push(shuffle[i])
     }
   }
-  
+ //console.log(one.concat(two,three,four,five,six,seven,eight,nine,ten,jack,queen,king));
  console.log(`Ascending: ${one.concat(two,three,four,five,six,seven,
  eight,nine,ten,jack,queen,king)}`);
   
+ //console.log(one.concat(two,three,four,five,six,seven,eight,nine,ten,jack,queen,king).reverse());
  console.log(`Descending: ${one.concat(two,three,four,five,six,seven,
  eight,nine,ten,jack,queen,king).reverse()}`);
 
 }
 
-function shuffleDeck() {
-  shuffle = deck.slice();
-  // increment up
-  for (let i = 0; i < shuffle.length; i++) {
-    // Generate random number to make new position for each card in deck
-    let random = Math.floor(Math.random() * shuffle.length);
-    // Swap card positions
-    swapCard = shuffle[i];
-    shuffle[i] = shuffle[random];
-    shuffle[random] = swapCard;
-  }
-    console.log(`Shuffled Deck: ${shuffle}`);
-}
 
 
-let history=[];
-let input=[];
 let dealCard=[];
-
 
 function deal(){
   if(shuffle.length>0){  
   	dealCard = shuffle.shift();
   	convert(dealCard);
-    history.push(dealCard);
-    input.push(dealCard);
     console.log(`Remaining cards from the Deck: ${shuffle}`);
     //showDeck(shuffle);
-    if(shuffle.length===0){
-      console.log("No more cards left Bes");
-    }
+    //if(shuffle.length===0){
+    // console.log("No more cards left Bes");
+    //}
   }else{
   	console.log("Empty Deck na Bes. Press Reset");
   }
 }
 
- function dealFive(){
-  if(shuffle.length>0){
-  	dealCard = shuffle.splice(0,5);
-  	convert(dealCard);
-    history.push(dealCard);
-    input=[];
-    input.push(dealCard);
-    console.log(input);
-    console.log(`Remaining cards from the Deck: ${shuffle}`);
-  }else{
-  	console.log("Empty Deck na Bes. Press Reset");
-  }
-} 
 
 function convert(card){
 	let value=card.slice(1,shuffle.length);
@@ -182,7 +172,7 @@ function convert(card){
   let vCode;
   let sCode;
  
-  if(value==="A"){
+  if(value==="Ace"){
   	vCode="Ace";
   }else if(value==="2"){
   	vCode="Two";
@@ -202,9 +192,9 @@ function convert(card){
   	vCode="Nine";
   }else if(value==="10"){
   	vCode="Ten";
-  }else if(value==="J"){
+  }else if(value==="Jack"){
   	vCode="Jack";
-  }else if(value==="Q"){
+  }else if(value==="Queen"){
   	vCode="Queen";
   }else{
   	vCode="King";
@@ -223,6 +213,17 @@ function convert(card){
   
   console.log(vCode+" of "+sCode);
 }
+
+ function dealFive(){
+  if(shuffle.length>0){
+  	dealCard = shuffle.splice(0,5);
+    console.log(`Cards on Hand: ${dealCard}`);
+    console.log(`Remaining cards from the Deck: ${shuffle}`);
+  }else{
+  	console.log("Empty Deck na Bes. Press Reset");
+  }
+} 
+
 
 
 function reset(){
