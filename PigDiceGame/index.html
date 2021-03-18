@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <title>🐷🎲 GAME </title>
+    </head>
+
+    <body>
+        
+        <div class="wrapper clearfix" data-aos="fade-up">
+            <header id="instructions" class="over">
+                <a href="#" class="closebtn">&times;</a>
+                <div class="overlay-content">
+                  <h3>How to Play</h3>
+                  <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+                  </br>
+                    🐽 If the player rolls a 1, they score nothing and it becomes the next player's turn.
+                  </br>
+                    🐽 If the player rolls any other number, it is added to their turn total and the player's turn continues.
+                  </br>  
+                    🐽 If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+                  </br> </br> 
+                    The first player to reach the score of 100 wins.</p>
+                </div>
+            </header>
+
+            <div class="inst">&#9776 How to Play</div>
+            <ul id="themeChanger">
+                <li class="has-dropdown">
+                  <ul class="dropdown">
+                    <li class="dropdown-item">
+                      <a id="light" href="#"></a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a id="dark" href="#"></a>
+                    </li>
+                  </ul>
+                </li>
+            </ul>
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">🐷Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">🐷Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new">🔄Reset</button>
+            <button class="btn-roll">🎲 Roll dice</button>
+            <button class="btn-hold">⏹ Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+
+            <div id="modal" class="overlay">
+                <div class="popup" data-aos="fade-down">
+                    <h2>CONGRATULATIONS!</h2>
+                    <div class="winMsg">
+                        <span id="winner"> </span>
+                    </div>
+                    <button id="play-again">
+                        Play again ?</a>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <audio autoplay loop=infinite>
+            <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="applause">
+            <source src="yehey.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="roll">
+            <source src="roll.mp3" type="audio/mpeg">
+        </audio>
+        <script src="app.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+            AOS.init({
+                offset: 100,
+                duration: 1000
+            });
+         </script>
+    </body>
+</html>
