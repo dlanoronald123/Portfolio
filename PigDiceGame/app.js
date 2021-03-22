@@ -58,7 +58,7 @@ function holdButton()  {
         allTimeScore[currentPlayer] += roundScore;
         document.querySelector('#current-' + currentPlayer).innerHTML = allTimeScore[currentPlayer];
         playerName = document.querySelector('#name-' + currentPlayer).innerHTML;
-        if (allTimeScore[currentPlayer] >= 100) { //Setting the score to reach
+        if (allTimeScore[currentPlayer] >= 25) { //Setting the score to reach
             congratulations(playerName);
         } else {
             nextPlayer();
