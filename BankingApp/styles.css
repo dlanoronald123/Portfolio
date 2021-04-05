@@ -1,0 +1,307 @@
+*{
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  body{
+    margin: auto;
+    height: auto;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    background: radial-gradient(at 50% -20%, #ced3d0, #096e17) fixed;
+  }
+
+nav{
+    top: 0;
+    position: fixed;
+    background: #067406;
+    width: 100%;
+    border: 3px solid black;
+  }
+  
+  .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 50px;
+    padding: 10px 100px;
+  }
+  
+  nav > ul{
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav > ul > li{
+    line-height: 20px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  
+  a:hover{
+    background: #000;
+    color: white;
+    transition: 0.5s;
+  }
+
+
+/*FORMS*/
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+}
+
+#createForm{
+    display: flex;
+    justify-content: center;
+    margin-top:150px;
+    width: auto;
+}
+
+#depositForm{
+    margin-top:180px;
+}
+
+
+#withdrawForm{
+    margin-top:180px;
+}
+
+#transferForm {
+    margin-top:55px;
+    width:0%;
+}
+
+.createAccount, .deposit, .withdraw{
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(at 50% -20%, #c1dbc8, #0a0e16) fixed;
+    width: 400px;
+    height: 360px;
+    border-radius: 15px 15px;   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.transfer{
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(at 50% -20%, #c1dbc8, #0a0e16) fixed;
+    width:400px;
+    height: 580px;
+    border-radius: 15px 15px;   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.createTitle, .depoTitle, .withdrawTitle, .transferTitle{
+    color: white;
+    height: 50px;
+    font-size: 1.7em;
+    text-align: center;
+    background: rgb(1, 155, 47);
+    border-radius: 15px 15px 0px 0px;   
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+label{
+    margin-top: 20px;
+    max-width: 150px;
+}
+.input {
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 0.5px;
+}
+
+/*Buttons*/
+
+button{
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.createBtn{
+    margin: auto;
+    width: 110px;
+    color: rgb(224, 222, 222);
+    background: rgb(1, 155, 47);
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.depositBtn, .withdrawBtn{
+    margin: auto;
+    width: 110px;
+    color: rgb(224, 222, 222);
+    background: rgb(1, 155, 47);
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.transferBtn{
+    margin: auto;
+    width: 110px;
+    color: rgb(224, 222, 222);
+    background: rgb(1, 155, 47);
+    height: 40px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.depositBtn:hover{
+    background: none;
+    border: 2px solid green;
+    color:black;
+}
+
+.withdrawBtn:hover{
+    background: none;
+    border: 2px solid green;
+    color:black;
+}
+
+.transferBtn:hover{
+    background: none;
+    border: 2px solid green;
+    color:black;
+}
+
+.createBtn:hover{
+    background: none;
+    border: 2px solid green;
+    color:black;
+}
+
+.deleteBtn{
+
+    color:red;
+}
+/*----------------------------------------*/
+
+/*TABLE*/
+
+.accounts{
+    margin-top:100px;
+}
+
+.table{
+    margin: 70px auto 0 auto;
+    border-collapse: collapse;
+    width: 700px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.tableRow{
+    height: 40px;
+    cursor: pointer;
+}
+
+thead{
+    color: white;
+    border: 1px solid;  
+    width:auto;
+    font-size: 1em;
+    display: inline-block;
+    background: rgb(1, 155, 47);
+    height: 30px;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+}
+  
+tbody {  
+    border: 1px solid white;
+    border-radius:0px 0px 15px 15px;
+    width:auto;
+    display: inline-block;         
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background: radial-gradient(at 50% -20%, #c1dbc8, #0a0e16) fixed;
+}
+ 
+.emptyData{
+    width:800px;
+    height: 50px;
+    text-align: center;
+}
+.entry1 {
+    height: 30px;
+    padding: 0;
+    margin:0;
+    width: 100px;
+    text-align: center;
+}
+
+.entry2 {
+    padding: 0;
+    margin:0;
+    width: 200px;
+}
+.entry3 {
+    padding: 0;
+    margin:0;
+    width: 200px;
+}
+
+.entry4{
+    padding: 0;
+    padding-right: 10px;
+    margin:5px;
+    width: 40px;       
+}
+
+/*-------------------------*/
+
+/* TRANSFER */
+
+.subtitle{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sender{  
+    display: flex; 
+    flex-direction: column;
+
+    width: 300px; 
+  
+}
+.receiver{
+    display: flex;
+    flex-direction: column;
+ 
+    width: 300px; 
+}

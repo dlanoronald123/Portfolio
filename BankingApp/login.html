@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <title>Banking App</title>
+    <style>
+        *{
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body{
+            background: radial-gradient(at 50% -20%, #ced3d0, #096e17) fixed;
+        }
+
+        #loginForm{
+            display: flex;
+            justify-content: center;
+            margin-top:150px;
+            width: auto;
+        }
+
+        .login{
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(at 50% -20%, #c1dbc8, #0a0e16) fixed;
+            width: 400px;
+            height: 300px;
+            border-radius: 15px 15px;   
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .loginTitle{
+            color: white;
+            height: 50px;
+            font-size: 1.7em;
+            text-align: center;
+            background: rgb(1, 155, 47);
+            border-radius: 15px 15px 0px 0px;   
+        }
+      
+        form {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                width: 300px;
+                margin: 0 auto;
+                height: 100%;
+            }
+
+        label{
+            margin-top: 20px;
+            max-width: 150px;
+        }
+        .input {
+            height: 30px;
+            border-radius: 5px;
+            outline: none;
+            border: solid 0.5px;
+        }
+
+        #loginBtn{
+            margin: auto;
+            width: 110px;
+            color: rgb(224, 222, 222);
+            background: rgb(1, 155, 47);
+            height: 40px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #loginBtn:hover{
+            background: none;
+            border: 2px solid green;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <div class="login">
+        <div class="loginTitle"><strong>🏦BANKING APP</strong></div>
+            <form>
+                <label for="">Username:</label>
+                <input type="text" id="username" name="username" class="input" placeholder="Enter username" required>
+                <label for="">Password:</label>
+                <input type="password" id="password" name="password" class="input" placeholder="Enter password" required>
+                <button id="loginBtn" onclick="check(this.form)">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function check(form){ 
+            if (form.username.value=="admin" && form.password.value=="0000"){
+                alert("Login Successfully");
+                window.open("index.html");                
+            } else {
+                alert("Login Failed");
+            }               
+        }
+    </script>
+</body>
+</html>

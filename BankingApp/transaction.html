@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Banking App</title>
+</head>
+<body>
+    <nav id="navbar">
+        <label for="logo" class="logo">🏦BANKING APP</label>
+        <ul>
+            <li><a href="index.html" id="home">ACCOUNTS</a></li>
+            <li><a href="create.html" id="createUser">create user</a></li>
+            <li><a href="transaction.html" id="deposit">transactions</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <div id="depositForm" data-aos="flip-up">
+            <div class="deposit">
+                <div class="depoTitle"><strong>Deposit Money 💰</strong></div>
+                <form class="depositForm">
+                    <label>First Name:</label>
+                    <input type="text" id="firstname" name="firstname" class="input" placeholder="Enter First Name" required>
+                    <label>Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" class="input" placeholder="Enter Last Name" required>
+                    <label>Amount to Deposit:</label>
+                    <input type="number" id="amount" name="amount" class="input" placeholder="Enter amount" step=".0000000000000001" required>
+                    <button class="depositBtn">Deposit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="transferForm" data-aos="flip-up">
+            <div class="transfer">
+                <div class="transferTitle"><strong>Transfer Money 💰</strong></div>
+                <form class="transferForm">
+                        <div class="sender">
+                            <div class="title"><strong class="subtitle">Sender</strong></div>
+                            <label>First Name:</label>
+                            <input type="text" id="firstname" name="senderFirstname" class="input" placeholder="Enter First Name" required>
+                            <label>Last Name:</label>
+                            <input type="text" id="lastname" name="senderLastname" class="input"  placeholder="Enter Last Name" required>
+                            <label>Amount to Transfer:</label>
+                            <input type="number" id="amount" name="senderAmount" class="input" placeholder="Enter Amount" step=".0000000000000001" required>
+                        </div>
+
+                        <div class="receiver">
+                            <div class="title"><strong class="subtitle">Receiver</strong></div>
+                            <label>First Name:</label>
+                            <input type="text" id="firstname" name="receiverFirstname" class="input" placeholder="Enter First Name" required>
+                            <label>Last Name:</label>
+                            <input type="text" id="lastname" name="receiverLastname" class="input" placeholder="Enter Last Name" required>
+                        </div>
+                        <button type="submit" class="transferBtn">Transfer</button>
+                </form>
+            </div>  
+        </div>
+
+        <div id="withdrawForm" data-aos="flip-up">
+            <div class="withdraw">
+                <div class="withdrawTitle"><strong>Withdraw Money 💰</strong></div>
+                <form class="withdrawForm">
+                    <label>First Name:</label>
+                    <input type="text" id="firstname" name="firstname" class="input" placeholder="Enter First Name" required>
+                    <label>Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" class="input" placeholder="Enter Last Name" required>
+                    <label>Amount to Withdraw:</label>
+                    <input type="number" id="amount" name="amount" class="input" placeholder="Enter amount" step=".0000000000000001" required>
+                    <button class="withdrawBtn">Withdraw</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <audio id="cash">
+        <source src="cash.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="transact.js"></script>
+</body>
+
+</html>

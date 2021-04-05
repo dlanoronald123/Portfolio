@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3239f646fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Banking App</title>
+</head>
+
+<body>
+    <body>
+        <nav id="navbar">
+            <label for="logo" class="logo">🏦BANKING APP</label>
+            <ul>
+                <li><a href="index.html" id="home">ACCOUNTS</a></li>
+                <li><a href="create.html" id="createUser">create user</a></li>
+                <li><a href="transaction.html" id="transaction">transactions</a></li>
+            </ul>
+          </nav>
+
+        <div class="accounts" data-aos="fade-up">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="entry1">ACCOUNT NO.</th>
+                        <th class="entry2">FULL NAME</th>
+                        <th class="entry3">BALANCE</th>
+                        <th class="entry4">DELETE</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
