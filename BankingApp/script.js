@@ -13,7 +13,7 @@ createTable();
 
 function list_users(){
     return users;
-}q
+}
 
 function createTable(){
     if (tbody !== null){
@@ -111,4 +111,5 @@ function deleteAccount(user){
     localStorage.setItem('users',JSON.stringify(users));
     location.reload();
 }
+
 
