@@ -72,16 +72,31 @@ nav{
 
 #depositForm{
     margin-top:180px;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeUp ease 1s;
+    -moz-animation: fadeUp ease 1s;
+    -o-animation: fadeUp ease 1s;
+    -ms-animation: fadeUp ease 1s;
 }
 
 
 #withdrawForm{
     margin-top:180px;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
 }
 
 #transferForm {
     margin-top:55px;
     width:0%;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
 }
 
 .createAccount, .deposit, .withdraw{
@@ -305,3 +320,12 @@ tbody {
  
     width: 300px; 
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
