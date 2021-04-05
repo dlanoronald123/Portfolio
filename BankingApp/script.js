@@ -9,13 +9,13 @@ if (users === null){
     users = [];
 }
 
-loadTable();
+createTable();
 
 function list_users(){
     return users;
-}
+}q
 
-function loadTable(){
+function createTable(){
     if (tbody !== null){
         tbody.innerHTML = "";
         if (parseInt(list_users().length) === 0) tbody.innerHTML = "</tr><td class = 'emptyData' colspan ='4'>Empty Data</td></tr>";
@@ -83,7 +83,7 @@ function createSubmit() {
             var item = elements.item(i);
             item.value = '';
         }
-        loadTable();
+        createTable();
     }
     return false;
 }   
@@ -96,7 +96,7 @@ function createSubmit() {
                 if (confirmDelete){
                     deleteAccount(user);
                     alert ('Account deleted.')
-                    loadTable();
+                    createTable();
                 }
             });
         }
@@ -111,3 +111,4 @@ function deleteAccount(user){
     localStorage.setItem('users',JSON.stringify(users));
     location.reload();
 }
+
