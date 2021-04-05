@@ -16,24 +16,8 @@ if (users === null) {
     users = [];
 }
 
-loadTable();
-
 function list_users() {
     return users;
-}
-
-function loadTable() {
-    if (tbody !== null) {
-        tbody.innerHTML = "";
-        if (parseInt(list_users().length) === 0) tbody.innerHTML = "</tr><td class='noData'colspan='4'>No Data</td></tr>";
-        for (let i = 0; i < list_users().length; i++) {
-            let tr = "<tr class='dashboardRow'>";
-            let fullName = list_users()[i].name;
-            let amount = list_users()[i].amount;
-            tr += "<td class='col1'>" + (i + 1) + "</td>" + "<td class='col2'>" + fullName + "</td>" + "<td class='col3'>" + get_balance(amount) + "</td></tr>";
-            tbody.innerHTML += tr;
-        }
-    }
 }
 
 function get_balance(user) {
