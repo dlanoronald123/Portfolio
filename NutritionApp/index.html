@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>🍲FOODPEDIA</title>
+  </head>
+  <body onload="load()">
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#features" class="scroll-link">features</a>
+              </li>
+              <li>
+                <a href="#search" class="scroll-link">search</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <img src="title1.png" id="react" data-aos="fade-up" data-aos-duration="2000">  
+          <!-- <h1>FOODPEDIA</h1> -->
+          <p data-aos="flip-up">
+            Food is not just calories, it is information. It talks to your DNA and tells it what to do.
+            The most powerful tool to change your health, environment and the world is your fork.
+          </p>
+          <a href="#search" class="scroll-link btn btn-white"data-aos="flip-up" data-aos-duration="2000">Analyze A Food</a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- features -->
+    <section id="features" class="section">
+      <div class="features"> 
+          <div class="box" data-aos="flip-left" data-aos-duration="1000">
+            <h2>NUTRITION DATA</h2>
+            <h3>Full analysis in real time</h3>
+            <p>Entity extraction, measure and quantity extraction with computation of the full nutrition label in under a second.</p>
+          </div>
+          <div class="box" data-aos="flip-left" data-aos-duration="1000">
+            <h2>HEALTH AND DIET LABELS</h2>
+            <h3>Manage your Health</h3>
+            <p>This app will help user check diet, health and allergen labels with high accuracy upon analyzing their food.</p>
+          </div>
+          <div class="box" data-aos="flip-left" data-aos-duration="1000">
+            <h2>RELATED RECIPES </h2>
+            <h3>List on the Go</h3>
+            <p>Gives you related recipes based on what you input to get the nutrition data into your websites or mobile applications.</p> 
+          </div>
+      </div> 
+    </section>
+
+    
+    <!-- search -->
+    <section id="search" class="section">
+      <div class="container initial">   
+        <h1 class="title" data-aos="flip-up" data-aos-duration="1500">Search</h1>
+        <form data-aos="fade-up">
+          <input type="text" placeholder="1 bottle wine" >
+          <ion-icon name="search-outline"></ion-icon>
+        </form>
+        
+        <div class="search-result"></div>
+        <div id="popup1"><strong>No Results Found!</strong></div> 
+        <div id="popup"><strong>Related Recipes</strong></div>
+        <div class="search-resultRecipe" data-aos="fade-up"></div>  
+      </div>
+
+      <div class="recipe-details">
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+          <i class = "fas fa-times"></i>
+        </button>
+
+        <div class="recipe-details-content" data-aos="fade-up"></div>
+      </div>
+    </section>  
+  
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- javascript -->
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  </body>
+</html>
