@@ -1,12 +1,12 @@
-
 let searchForm = document.querySelector("form")
 let searchResultDiv = document.querySelector(".search-result")
 let searchResultDivRecipe = document.querySelector(".search-resultRecipe")
 let recipeDetails = document.querySelector(".recipe-details-content")
+let recipeDetailsContent = document.querySelector('.meal-details-content');
 let container = document.querySelector(".container")
 let popup = document.querySelector("#popup")
-let analyzeBtn = document.querySelector(".analyze-btn")
 let recipeCloseBtn = document.getElementById('recipe-close-btn');
+let recipeCloseBtn1 = document.getElementById('recipe-close-btn1');
 let searchQuery = "";
 let appid = "3dc465e5";
 let appkey = "c5aa7e5db74ec4d4a8a7a00e7e7c8ef3";
@@ -15,9 +15,14 @@ let appidR = "d3d93041";
 let appkeyR = "e701c0498e001b0673feac0e48c17684";
 
 searchResultDivRecipe.addEventListener("click", getData);
+searchResultDivRecipe.addEventListener("click", getRecipe);
 
 recipeCloseBtn.addEventListener('click', () => {
   recipeDetails.parentElement.classList.remove('showRecipeData');
+});
+
+recipeCloseBtn1.addEventListener('click', () => {
+  recipeDetailsContent.parentElement.classList.remove('showRecipeData');
 });
 
 function load() {
@@ -41,9 +46,14 @@ async function fetchAPI(){
   const foodData = await response1.json();
   if (foodData.more === true) {
     generateHTML(foodData);
-    console.log(foodData);  } 
+    console.log(foodData);
+    popup1.classList.add("show")  } 
     else {
     popup1.classList.remove("show")
+    searchResultDiv.innerHTML = "";
+    searchResultDivRecipe.innerHTML = "";
+    popup.classList.add("show")
+
   }
   analyzeHTML(nutriData);
   console.log(nutriData);
@@ -51,7 +61,6 @@ async function fetchAPI(){
 
 function analyzeHTML(data){
   searchResultDiv.innerHTML = `
-
      <div class="performance-facts" data-aos="zoom-in-up">
         <header class="performance-facts__header">
           <h2 class="performance-facts__title">Nutrition Facts</h2>
@@ -178,7 +187,6 @@ function analyzeHTML(data){
             </table>
       </div>
  
-
       <div class="nutritionFacts" data-aos="zoom-in-up">
         <header class="nutritionFacts_header">
           <h2 class="nutritionFacts_title">Nutrition Facts</h2>
@@ -257,7 +265,6 @@ function generateHTML(data) {
 
   for (let i = 0;i < 20; i++) {
   menuItem=menuItem+ `
-
   <div class="item" data-aos="zoom-in-up" data-label=${data.hits[i].recipe.label}>
     <img src="${data.hits[i].recipe.image}" alt="img">
       <div class="flex-container">
@@ -382,6 +389,42 @@ recipeDetails.parentElement.classList.add('showRecipeData');
 }
 
 
+function getRecipe(e){
+  e.preventDefault();
+    if(e.target.classList.contains('view-btn')){
+      let recipeItem = e.target.parentElement.parentElement;
+      fetch(`https://api.edamam.com/search?q=${recipeItem.dataset.label}&app_id=${appidR}&app_key=${appkeyR}`)
+      .then(response => response.json())
+      .then(data => mealDetails(data.hits));
+  }
+}
+
+
+function mealDetails(data){
+  console.log(data);
+  data = data[0];
+  let html = `
+        <div class = "recipe-instruct">
+            <h3>Ingrients:</h3>
+            <p>${data.recipe.ingredientLines}</p>
+        </div>
+    <h3>Dish Type:</h3>
+    <p class = "dish-labels"> ${data.recipe.dishType}</p>
+    <h3>Health Labels</h3>
+    <p class = "health-labels">${data.recipe.healthLabels}</p>
+    <h3>Diet Labels</h3>
+    <p class = "diet-labels">${data.recipe.dietLabels}</p>
+    <h3>Cautions</h3>
+    <p class = "caution-labels">${data.recipe.cautions}</p>
+        <div class = "recipe-link">
+            <a href = "${data.recipe.url}" target = "_blank">View Full Recipe</a>
+        </div>
+  `;
+recipeDetailsContent.innerHTML = html;
+recipeDetailsContent.parentElement.classList.add('showRecipeData');
+}
+
+
 
 // ********** close links ************
 const navToggle = document.querySelector(".nav-toggle");
@@ -454,4 +497,3 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   });
 });
-// calculate heights
