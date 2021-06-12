@@ -1,4 +1,5 @@
 
+
 /* Basic */
 
 	html {
@@ -11,7 +12,16 @@
 	}
 
 	
-
+	.icons{
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+	
+	}
+	.icons > a {
+		margin: 6px;
+	  }
 
 	body,textarea {
 		color: #ffffff;
@@ -24,10 +34,10 @@
 		text-decoration: none;
 	}
 
+
 		a:hover {
 			border-bottom-color: transparent;
-			color: #882b00 !important;
-			
+			color: #3f61cf;
 		}
 
 	
@@ -185,4 +195,6 @@
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;   
+	}
+
 	}
