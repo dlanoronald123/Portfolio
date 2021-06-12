@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 
 .hexa{
   border: 0px;
