@@ -204,17 +204,33 @@ function createPost(post){
 
 // Async/ Await with Fetch
 
-async function fetchUsers(){
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
-  console.log(data);
+// async function fetchUsers(){
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const data = await res.json();
+//   console.log(data);
+// }
+
+// fetchUsers();
+
+//BINDING 
+
+let a1 = {
+  x:1,
+  y:2
 }
 
-fetchUsers();
+let b1 = {
+  x:10,
+  y:20
+}
 
 
+function log(){
+  console.log(this.x + ","+ this.y)
+}
 
-
+let afunc = log.bind(a1);
+afunc();
 //Promis.all
 // const promise1 = Promise.resolve("Hello World");
 // const promise2 = 10;
