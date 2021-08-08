@@ -157,36 +157,36 @@
 
 // CALLBACKS
 
-const posts = [
-  {title: "one", body: "Body of One"},
-  {title: "two", body: "Body of Two"}
-];
+// const posts = [
+//   {title: "one", body: "Body of One"},
+//   {title: "two", body: "Body of Two"}
+// ];
 
-function getPosts(){
-  setTimeout(() => {
-    let output = '';
-    posts.forEach((post,index) => {
-       output += `<li>${post.title}</li>`;
-    }); 
-    document.body.innerHTML = output;
-  }, 1000);
-}
+// function getPosts(){
+//   setTimeout(() => {
+//     let output = '';
+//     posts.forEach((post,index) => {
+//        output += `<li>${post.title}</li>`;
+//     }); 
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
 
-function createPost(post){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      posts.push(post);
+// function createPost(post){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       posts.push(post);
       
-      const error = false;
-      if (!error){
-        resolve();
-      }else{
-        reject("Error: Something went wrong");
-      }
-    }, 2000);
-  });
+//       const error = false;
+//       if (!error){
+//         resolve();
+//       }else{
+//         reject("Error: Something went wrong");
+//       }
+//     }, 2000);
+//   });
 
-}
+// }
 
 // createPost({title: "three", body: "Body of Three" })
 // .then(getePosts)
@@ -214,23 +214,23 @@ function createPost(post){
 
 //BINDING 
 
-let a1 = {
-  x:1,
-  y:2
-}
+// let a1 = {
+//   x:1,
+//   y:2
+// }
 
-let b1 = {
-  x:10,
-  y:20
-}
+// let b1 = {
+//   x:10,
+//   y:20
+// }
 
 
-function log(){
-  console.log(this.x + ","+ this.y)
-}
+// function log(){
+//   console.log(this.x + ","+ this.y)
+// }
 
-let afunc = log.bind(a1);
-afunc();
+// let afunc = log.bind(a1);
+// afunc();
 //Promis.all
 // const promise1 = Promise.resolve("Hello World");
 // const promise2 = 10;
@@ -242,3 +242,13 @@ afunc();
 
 // Promise.all ([promise1, promise2, promise3, promise4])
 //   .then((values) => console.log(values));
+
+sentence = "TheQuickBrownFoxJumpsOverTheLazyDog."
+
+function capitalize(){
+  let set = sentence.split(/(?=[A-Z])/).join(' ');
+  console.log(set.substring(0,3).toUpperCase()+ set.slice(3));
+}
+
+capitalize();
+
