@@ -252,3 +252,96 @@ function capitalize(){
 
 capitalize();
 
+
+
+// DROP DATABASE IF EXISTS galileo_exam;
+// CREATE DATABASE galileo_exam;
+// USE galileo_exam;
+
+// CREATE TABLE `employees` (
+//   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+//   `name` varchar(255) DEFAULT NULL,
+//   `date_hired` datetime DEFAULT NULL,
+//   `department_id`bigint(20) DEFAULT NULL,
+//   `salary_id`bigint(20) DEFAULT NULL,
+//   PRIMARY KEY (`id`)
+// );
+// INSERT INTO `employees` VALUES (1,'Employee1','2017-10-07',3,1),(2,'Employee2','2012-10-08',2,3),(3,'Employee3','2016-08-10',1,2),(4,'Employee4','2018-08-10',3,2);
+
+
+// CREATE TABLE `departments` (
+//   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+//   `department` varchar(255) DEFAULT NULL,
+//   PRIMARY KEY (`id`)
+// );
+
+// INSERT INTO `departments` VALUES (1,'Marketing'),(2,'Consultancy'),(3,'IT');
+
+
+// CREATE TABLE `salary` (
+//   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+//   `salary` bigint(255) DEFAULT NULL,
+//   PRIMARY KEY (`id`)
+// );
+
+// INSERT INTO `salary` VALUES (1,10000),(2,15000),(3,20000);
+
+
+// a. Select * FROM employees INNER JOIN salary on salary.id = employees.salary_id INNER JOIN departments on departments.id = employees.department_id WHERE salary = 20000;
+// b.Select * FROM employees WHERE (date_hired BETWEEN '2017-10-07'AND '2018-08-10');
+// c. Select * FROM employees INNER JOIN departments on departments.id = employees.department_id WHERE department = "IT" AND year(date_hired)='2018' 
+
+
+// Galileo PHP EXAM
+
+// <?php
+
+// $i=1;
+// $num = 0;
+
+// while($i<=10)
+// {
+//     if ($i % 2 == 0){
+//      $num = $num + $i;
+//     }
+// $i++;
+// }
+
+// echo $num;
+// ?>
+
+
+
+// <?php
+
+// $i = 0;
+
+// $odd="Odd Numbers Are : ";
+
+// do {
+//     if($i%2 == 1) {
+//      $odd.= $i;
+//     }
+//     $i++;
+// }while ($i <= 10);
+
+// echo $odd;
+ 
+// ?>
+
+
+
+// <?php  
+// $num = 0;  
+// $n1 = 0;  
+// $n2 = 1;  
+// echo $n1.' '.$n2.' ';  
+// while ($num < 8 )  
+// {  
+//     $n3 = $n2 + $n1;  
+//     echo $n3.' ';  
+//     $n1 = $n2;  
+//     $n2 = $n3;  
+//     $num = $num + 1;  
+// }
+// ?>  
