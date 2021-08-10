@@ -345,3 +345,8 @@ capitalize();
 //     $num = $num + 1;  
 // }
 // ?>  
+
+// Fetching API
+// fetch("data.json")
+//     .then(resp => resp.json())
+//     .then(data => console.log(data));
