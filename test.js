@@ -202,6 +202,10 @@
 
 // init();
 
+
+
+
+
 // Async/ Await with Fetch
 
 // async function fetchUsers(){
@@ -242,6 +246,183 @@
 
 // Promise.all ([promise1, promise2, promise3, promise4])
 //   .then((values) => console.log(values));
+
+// OOP Crash Course (ES5 & ES6)
+
+// const s1 = "hello";
+
+// const s2 = new String("hello");
+
+// console.log(typeof s2);
+// console.log(window);
+// alert(1);
+// console.log(navigator.appVersion);
+
+// const book1 = {
+//   title: 'Book One',
+//   author: "Ronald M",
+//   year: "2021",
+//   getSummary: function(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   }
+// };
+
+
+// const book2 = {
+//   title: 'Book Two',
+//   author: "Lover One",
+//   year: "2020",
+//   getSummary: function(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   }
+// };
+
+// console.log(book1.getSummary());
+// console.log(book2.getSummary());
+// console.log(Object.values(book2));
+// console.log(Object.keys(book2));
+
+// function Book(title,author,year){
+//   this.title = title;
+//   this.author = author;
+//   this.year = year;
+//   this.getSummary = function(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   };
+// }
+
+// //Instantiate an Object
+// const book1 = new Book('Book One', 'Ronald M', '2021');
+// const book2 = new Book('Book Tow', 'The One', '2020');
+
+// console.log(book2);
+
+
+// function Book(title,author,year){
+//   this.title = title;
+//   this.author = author;
+//   this.year = year;
+//   this.getSummary = function(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   };
+// }
+// //getSummary
+// Book.prototype.getSummary = function(){
+//   return `${this.title} was written by ${this.author} in ${this.year}`;
+// };
+
+// //getAge
+// Book.prototype.getAge = function(){
+//   const years = new Date().getFullYear() - this.year;
+//   return `${this.title} is ${years} years old`;
+// };
+
+// //Revise / Change Year
+// Book.prototype.revise = function(newYear){
+//   this.year = newYear;
+//   this.revise = true;
+// }
+
+// //Instantiate an Object
+// const book1 = new Book('Book One', 'Ronald M', '2021');
+// const book2 = new Book('Book Two', 'The One', '2020');
+
+// console.log(book2);
+// book2.revise('2019');
+// console.log(book2);
+
+
+// function Book(title,author,year){
+//   this.title = title;
+//   this.author = author;
+//   this.year = year;
+// }
+
+// //getSummary
+// Book.prototype.getSummary = function(){
+//   return `${this.title} was written by ${this.author} in ${this.year}`;
+// };
+
+// //Magazine Constructor
+// function Magazine(title,author,year,month){
+//   Book.call(this,title,author,year);
+//   this.month = month;
+// };
+
+// //Inherit Prototype
+// Magazine.prototype = Object.create(Book.prototype);
+
+// //Instantiate Magazine Object
+// const mag1  = new Magazine('Mag One','John Doe','2017')
+
+// //Use Magazine Construtor
+// Magazine.prototype.constructor = Magazine;
+
+// console.log(mag1);
+
+//Object of Protos
+// const bookProtos = {
+//   getSummary: function(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   },
+//   getAge: function(){
+//     const years = new Date().getFullYear() - this.year;
+//     return `${this.title} is ${years} years old`;
+//   }
+// }
+
+//Create Object
+// const book1 = Object.create (bookProtos);
+// book1.title = 'Booke Uno'
+// book1.author = 'Magno'
+// book1.year = '2015'
+
+// const book1 = Object.create (bookProtos,{
+//   title: {value: 'Book One'},
+//   author: {value: 'John Doe'},
+//   year: {value: '2017'}
+// });
+
+
+// console.log(book1.getSummary());
+// console.log(book1.getAge());
+
+// class Book {
+//   constructor(title,author,year){
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//   }
+//   getSummary(){
+//     return `${this.title} was written by ${this.author} in ${this.year}`;
+//   }
+
+//   getAge(){
+//     const years = new Date().getFullYear() - this.year;
+//     return `${this.title} is ${years} years old`;
+
+//   }
+// }
+
+//Instantiate Object
+
+// const book1 = new Book('Book one', 'Ronald Magno', '2021')
+
+// console.log(book1.getSummary());
+// console.log(book1.getAge());
+
+// const x = 6 ;
+// const y = 11;
+
+// if (x > 5 && y > 10){
+//   console.log("x is more than 5 and y is more than 10");
+// }
+
+
+
+
+
+
 
 sentence = "TheQuickBrownFoxJumpsOverTheLazyDog."
 
