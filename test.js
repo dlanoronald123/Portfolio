@@ -527,7 +527,7 @@ capitalize();
 // }
 // ?>  
 
-// Fetching API
+// Fetching an API
 // fetch("data.json")
 //     .then(resp => resp.json())
 //     .then(data => console.log(data));
