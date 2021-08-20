@@ -32,3 +32,46 @@
 //   }
 //   console.log(str===reversed)
 // })("Sample")
+
+// var i = 0 
+// while (i < 10){
+//     i = i + 1
+//     if (i % 2 == 0){
+//         console.log(i + 1)
+//         // 3 5 7 9 11
+//     }
+// }
+
+// var i = 0 
+// while (i < 10){
+//     i = i + 1
+//     console.log(i)
+//     if (2 * i == i + 1){
+//     break;
+//     }
+// }
+//1
+
+// var s = "HelloWorld!!!=)"
+// var i = 0
+// while (i + 1 < s.length){
+//     if (s.charAt(i) != s.charAt(i+1)){
+//         console.log(s.charAt(i))
+//     }
+//     i = i+1
+// }
+//HeloWorld!=
+
+let n = 5
+let i = 1 
+let j = 1
+let k = 1
+for (i in n){
+    for (j in n-i) {
+        console.log("")
+    }
+    for (k in i) {
+        console.log("X")
+    }
+    console.log("\n")
+}
