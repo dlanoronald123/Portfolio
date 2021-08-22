@@ -95,6 +95,36 @@
 
 //Reverse an integer
 // const revInt = (num) =>{
+//     if(num <0) {
+//         console.log(-1 * (parseInt(num.toString().split('').reverse().join(''))));
+//     }else {
 //     console.log(parseInt(num.toString().split('').reverse().join('')));
+//     }
 // }
 // revInt(35)
+
+//FIZZBUZZ
+const fizzBuzz = (num)=> {
+    for (let i = 1; i <= 15; i++)
+    {
+        if(i % 3 === 0 && i % 5 === 0)
+        {
+            console.log("FizzBuzz");
+            i++;
+        }
+        if (i % 3 === 0) 
+        {
+            console.log("Fizz");
+            i++;
+        } 
+        else (i % 5 === 0) 
+        {
+            console.log("Buzz");
+            i++;
+        }
+        if (i>num) break;
+        else console.log(i)
+    }
+}
+
+fizzBuzz(15);
