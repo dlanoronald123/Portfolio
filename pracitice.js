@@ -92,3 +92,9 @@
 //     console.log(`${maxCharacter} appears ${maxNum} times`)
 // }
 // maxChar("heLLLoooo$$3p")
+
+//Reverse an integer
+// const revInt = (num) =>{
+//     console.log(parseInt(num.toString().split('').reverse().join('')));
+// }
+// revInt(35)
