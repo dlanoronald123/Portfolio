@@ -62,16 +62,33 @@
 // }
 //HeloWorld!=
 
-let n = 5
-let i = 1 
-let j = 1
-let k = 1
-for (i in n){
-    for (j in n-i) {
-        console.log("")
-    }
-    for (k in i) {
-        console.log("X")
-    }
-    console.log("\n")
-}
+// let n = 5
+// let i = 1 
+// let j = 1
+// let k = 1
+// for (i in n){
+//     for (j in n-i) {
+//         console.log("")
+//     }
+//     for (k in i) {
+//         console.log("X")
+//     }
+//     console.log("\n")
+// }
+
+//Find the character that appears the most and total number of times it appears.
+// const maxChar = (str)=> {
+//     let obj = {}
+//     for (let i of str)
+//         (!obj[i]) ? obj[i]=1 : obj[i]++;
+// let maxNum = 0;
+// let maxCharacter = '';
+//     for (let char in obj){
+//         if(obj[char] >= maxNum) {
+//             maxNum = obj[char];
+//             maxCharacter = char;
+//         }
+//     }
+//     console.log(`${maxCharacter} appears ${maxNum} times`)
+// }
+// maxChar("heLLLoooo$$3p")
