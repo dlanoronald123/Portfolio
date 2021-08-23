@@ -104,27 +104,45 @@
 // revInt(35)
 
 //FIZZBUZZ
-const fizzBuzz = (num)=> {
-    for (let i = 1; i <= 15; i++)
-    {
-        if(i % 3 === 0 && i % 5 === 0)
-        {
-            console.log("FizzBuzz");
-            i++;
-        }
-        if (i % 3 === 0) 
-        {
-            console.log("Fizz");
-            i++;
-        } 
-        else (i % 5 === 0) 
-        {
-            console.log("Buzz");
-            i++;
-        }
-        if (i>num) break;
-        else console.log(i)
-    }
-}
+// const fizzBuzz = (num)=> {
+//     for (let i = 1; i <= 15; i++)
+//     {
+//         if(i % 3 === 0 && i % 5 === 0)
+//         {
+//             console.log("FizzBuzz");
+//             i++;
+//         }
+//         if (i % 3 === 0) 
+//         {
+//             console.log("Fizz");
+//             i++;
+//         } 
+//         else (i % 5 === 0) 
+//         {
+//             console.log("Buzz");
+//             i++;
+//         }
+//         if (i>num) break;
+//         else console.log(i)
+//     }
+// }
 
-fizzBuzz(15);
+// fizzBuzz(15);
+
+//Chunked Array
+
+const result=(arr,n)=>{
+    let currentlength = arr.length;
+    let findResult=[];
+    
+    while( currentlength > n){
+      let chunkArr=arr.splice(0,n)
+      currentlength= arr.length
+      findResult.push(chunkArr)
+    }
+    findResult.push(arr) // push remaining part if existing 
+    console.log(findResult)
+    
+  }
+  result([1,3,5,6,3,7,9],3)
+//   result([10,3,15,6,3,7,9,0,2,6,4],4)
