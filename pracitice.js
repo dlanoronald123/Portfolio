@@ -131,18 +131,29 @@
 
 //Chunked Array
 
-const result=(arr,n)=>{
-    let currentlength = arr.length;
-    let findResult=[];
+// const result=(arr,n)=>{
+//     let currentlength = arr.length;
+//     let findResult=[];
     
-    while( currentlength > n){
-      let chunkArr=arr.splice(0,n)
-      currentlength= arr.length
-      findResult.push(chunkArr)
-    }
-    findResult.push(arr) // push remaining part if existing 
-    console.log(findResult)
+//     while( currentlength > n){
+//       let chunkArr=arr.splice(0,n)
+//       currentlength= arr.length
+//       findResult.push(chunkArr)
+//     }
+//     findResult.push(arr) // push remaining part if existing 
+//     console.log(findResult)
     
-  }
-  result([1,3,5,6,3,7,9],3)
+//   }
+//   result([1,3,5,6,3,7,9],3)
 //   result([10,3,15,6,3,7,9,0,2,6,4],4)
+
+//Chech unquie values
+function Unique(str) {
+    const obj = {};
+    for (let i of str)
+        (!obj[i]) ? obj[i]=1: obj[i]++; 
+        for(let j in obj)
+        (obj[j] > 1)? console.log(false) : console.log(true);
+}
+
+Unique("asdfgh");
