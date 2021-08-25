@@ -68,3 +68,5 @@ const Evens = (arr) => {
 
 const arr = [2,2,2,1]
 console.log(Evens(arr))
+
+const str = '2,5,7,9,10,1,4,8,3'
