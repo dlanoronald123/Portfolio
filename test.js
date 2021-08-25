@@ -424,14 +424,14 @@
 
 
 
-sentence = "TheQuickBrownFoxJumpsOverTheLazyDog."
+// sentence = "TheQuickBrownFoxJumpsOverTheLazyDog."
 
-function capitalize(){
-  let set = sentence.split(/(?=[A-Z])/).join(' ');
-  console.log(set.substring(0,3).toUpperCase()+ set.slice(3));
-}
+// function capitalize(){
+//   let set = sentence.split(/(?=[A-Z])/).join(' ');
+//   console.log(set.substring(0,3).toUpperCase()+ set.slice(3));
+// }
 
-capitalize();
+// capitalize();
 
 
 
@@ -531,3 +531,5 @@ capitalize();
 // fetch("data.json")
 //     .then(resp => resp.json())
 //     .then(data => console.log(data));
+
+
