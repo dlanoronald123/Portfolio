@@ -8,7 +8,6 @@ const makeArr = (str) => {
     return str.split(' ')
 }
 
-
 const cleanData = (arr) => {
     return arr.map(elem => parseInt(elem))
 }
@@ -33,7 +32,5 @@ const getMedian = (arr) => {
     return isEven ? arr[arr.length / 2 - 1] : arr[Math.floor(arr.length / 2)]
 }
 
-
 const composedGetNum = compose(getMedian, sort, cleanData, makeArr)
-
 console.log(composedGetNum(str))

@@ -42,6 +42,9 @@
   
 //   console.log(fibo(8))
 
+
+const str = '2,5,7,9,10,1,4,8,3'
+
 const Fibo = (num) => {
     const arr = [0,1]
     let a,b
@@ -53,20 +56,21 @@ const Fibo = (num) => {
     return arr.toString().split(' ').join()
 }
 
-console.log(Fibo(20))
   
-
-const Evens = (arr) => {
+const Sum = (arr) => {
     let sum = 0;
     arr.forEach(elem => {
-        if (elem % 2 === 0){
-            sum += elem
-        }
+        sum += elem
     })
     return sum
 }
 
 const arr = [2,2,2,1]
-console.log(Evens(arr))
+console.log(Sum(arr))
 
-const str = '2,5,7,9,10,1,4,8,3'
+
+
+// const compose = (a,b) => (data) => a(b(data));
+// const final = compose(Sum,Fibo)
+
+// console.log(final(10))
