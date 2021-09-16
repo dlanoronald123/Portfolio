@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      border: 1px solid black;
+      width: 300px;
+      padding: 10px;
+    }
+    #form-control{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+    #ok{
+      width: 40px;
+      color:white;
+      background-color: rgb(121, 121, 230);
+    }
+    #cancel{
+      width: 60px;
+    }
+    #form-buttons{
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 10px;
+    }
+    #fahrenheit{
+      margin-top: 10px;
+      border: 1px solid gray;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id='form'>
+    <div id="form-control">
+      <label for="label">This page says</label>
+      <label for="label">Enter temperature in Celsius:</label>
+      <input id="celsius" name="celsius" type="number">
+    </div>
+    <div id='form-buttons'>
+      <Button id='ok' onclick="Compute()">OK</Button> 
+      <Button id='cancel' onclick="Reset()">Cancel</Button>
+    </div>
+    <p id='fahrenheit'></p>
+  </div>
+<script src="sample.js"></script>
+</body>
+</html>
