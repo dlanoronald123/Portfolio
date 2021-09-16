@@ -1,0 +1,22 @@
+.palindrome{
+  width: 250px;
+  background-color: rgb(189, 177, 177);
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+button{
+  color:white;
+  background-color: rgb(91, 91, 175);
+  margin:10px 0;
+  font-size: 15px;
+}
+input{
+  width: 50%;
+  border:outline;
+  background-color: #fff;
+  padding: 5px;
+  color: gray;
+  font-size: 1.1rem;
+  border-radius:10px;
+}
