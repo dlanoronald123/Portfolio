@@ -148,12 +148,25 @@
 //   result([10,3,15,6,3,7,9,0,2,6,4],4)
 
 //Chech unquie values
-function Unique(str) {
-    const obj = {};
-    for (let i of str)
-        (!obj[i]) ? obj[i]=1: obj[i]++; 
-        for(let j in obj)
-        (obj[j] > 1)? console.log(false) : console.log(true);
-}
+// function Unique(str) {
+//     const obj = {};
+//     for (let i of str)
+//         (!obj[i]) ? obj[i]=1: obj[i]++; 
+//         for(let j in obj)
+//         (obj[j] > 1)? console.log(false) : console.log(true);
+// }
 
-Unique("asdfgh");
+// Unique("asdfgh");
+
+function FirstRecurringCharacter(arr){
+    for (i = 0; i < arr.length; i++) {
+      if (arr.indexOf(arr[i]) !== i) {
+        return arr[i];
+      }
+    }
+    return null;
+  };
+     
+   console.log(FirstRecurringCharacter(['A','B','C']))
+   console.log(FirstRecurringCharacter(['B','C','D','A','B']))
+   console.log(FirstRecurringCharacter(['B','C','A','B','A']))
