@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Magic Square</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <table border='1'>
+    <tbody>
+      <tr>
+        <td id="r1c1"><input type="text" id="inp11"></td>
+        <td id="r1c2"><input type="text" id="inp12"></td>
+        <td id="r1c3"><input type="text" id="inp13"></td>
+      </tr>
+      <tr>
+        <td id="r2c1"><input type="text" id="inp21"></td>
+        <td id="r2c2"><input type="text" id="inp22"></td>
+        <td id="r2c3"><input type="text" id="inp23"></td>
+      </tr>
+      <tr>
+        <td id="r3c1"><input type="text" id="inp31"></td>
+        <td id="r3c2"><input type="text" id="inp32"></td>
+        <td id="r3c3"><input type="text" id="inp33"></td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" id="magicButton" value="Compute Score" onclick="magicSquare();">
+  <div id="result"> </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

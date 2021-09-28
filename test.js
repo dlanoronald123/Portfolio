@@ -1,6 +1,9 @@
 // x = 1
 // y = 2
 
+// const { transform } = require("@babel/core")
+// const { resourceLimits } = require("worker_threads")
+
 // function Total(){
 //  console.log(x+y);
 // }
@@ -533,3 +536,78 @@
 //     .then(data => console.log(data));
 
 
+// function isPrime(n) {
+//   if (n < 2) {
+//     return false }
+//   for (let i = 2; i < n; i++) {
+//     if (n % i === 0) {
+//     return false
+//     }
+//   }
+//   return true
+// }
+// console.log(isPrime(13))
+
+// let ages = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
+// let result = []
+
+function fixage(arr){
+  for(i=0;i<arr.length;i++){
+    if(ages.includes(arr[i])){
+      result.push(arr[i])
+   }
+  }
+  if(result.length === 0){
+    console.log('NA')
+  } else {
+    console.log(result.toString())
+  }
+}
+
+fixage([5,15,18,19,20])
+
+
+// Option 1
+
+const ok = document.getElementById('ok')
+const cancel = document.getElementById('cancel')
+
+function optionalPow(a,b){
+  console.log(Math.pow(a,b));
+}
+
+function optionalSecondPow(a,b){
+  console.log(Math.pow(b,a));
+}
+
+ok.addEventListener('click',(e)=>{
+  e.preventDefault();
+  optionalPow();
+});
+
+cancel.addEventListener('click',(e)=>{
+  e.preventDefault();
+  optionalSecondPow();
+});
+
+
+//Option 2
+
+function optionalPow(a,b){
+  if('OK is pressed'){
+  console.log(Math.pow(a,b));
+  } else {
+    console.log(Math.pow(b,a));
+  }
+}
+
+
+result = []
+function transform(arr){
+  for(i=0;i<arr.length;i++){
+    result.push(arr[i].replace(/[^a-zA-Z0-9]/g, ''));
+  }
+  console.log(result)
+}
+
+transform(['a#','b@','c&'])
