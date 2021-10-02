@@ -6,7 +6,7 @@ btnCheck.addEventListener('click',(e)=>{
 
   const inputWord = str.value.toLocaleLowerCase();
   const string = inputWord.split('');
-  const reArray = string.reverse();
+  const reArray = string.reverse(); 
   const joinArray = reArray.join('');
 
   if(inputWord == joinArray){

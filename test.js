@@ -536,20 +536,20 @@
 //     .then(data => console.log(data));
 
 
-// function isPrime(n) {
-//   if (n < 2) {
-//     return false }
-//   for (let i = 2; i < n; i++) {
-//     if (n % i === 0) {
-//     return false
-//     }
-//   }
-//   return true
-// }
-// console.log(isPrime(13))
+function isPrime(n) {
+  if (n < 2) {
+    return false }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+    return false
+    }
+  }
+  return true
+}
+console.log(isPrime(13))
 
-// let ages = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
-// let result = []
+let ages = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
+let result = []
 
 function fixage(arr){
   for(i=0;i<arr.length;i++){
