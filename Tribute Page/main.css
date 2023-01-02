@@ -324,7 +324,7 @@ html{
 .nav {
   position: relative;
   overflow: hidden;
-  background-color: rgb(251, 255, 0);
+  background-color: #936b2d;
   border: 1px;
   margin:10px;
 }
@@ -333,9 +333,8 @@ html{
   float: center;
   top: 70%;
   font-size: 20px;
-  padding-right: 30px;
+  padding: 0 10px;
   color:black;
-  width: 20%;;
   font-family: 'Acme', serif;
   text-decoration: none;
   font-size: 2em;
@@ -370,13 +369,11 @@ h1 {
 }
 
 .header-inner {
-    width: max-content;
-    height: 100vh;
-    margin: 0px;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    padding-top: 70px;
   }
 
 .paragraph{
@@ -400,7 +397,7 @@ a.tribute-link {
 }
 
 a.tribute-link:hover {
-    color: red;
+    color: blue;
 }
 
 #image:hover {
@@ -410,12 +407,10 @@ a.tribute-link:hover {
 #image{
     border-radius: 3rem;
     transition: 1s;
-    height: 10%;
-    width: 30%;
+    height: auto;
+    width: auto;
     float: left;;
     padding: 30px;
-    margin-left:.3px;
-    margin-top:-53px;
 }
 
 
@@ -431,10 +426,11 @@ a.tribute-link:hover {
   
   /* HEADER WITH THE IMAGE */
   header {
-    background-image: url('lee.png');
+    background: url('head.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
   }     
   
   .header-outer {
@@ -445,19 +441,15 @@ a.tribute-link:hover {
   
   .date {
     display: inline !important; 
-    color: #070707;
+    color: #f9ef76;
     font-family: 'Carter One', serif;
     font-size: 50px;
   }
   
   
   #book{
-    width: 1px;
-    height: 1px;
-    display:inline-flex;
-    position: relative;
-    left: 14%;
-  
+    display:flex;
+    justify-content: center;
   }
 
   .bk-container:hover {
@@ -505,7 +497,16 @@ a.tribute-link:hover {
     background-position:center;
   }
   
-  
+  .biography{
+    display: flex;
+    justify-content: center;
+  }
+
+  .philosophy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
  
   #biography,
   #actor,
@@ -522,36 +523,24 @@ a.tribute-link:hover {
     margin-top: var(--margin-large) !important;
     background-image: url('bl1.jpg');
     width: 100%;
-    height: 500px;
+    height: 700px;
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
   }
  
-  
   .bg2 {
-    margin-top: var(--margin-large) !important;
     background-image: url('bl2.jpg');
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
   }
   
 
   .bg3 {
-    margin-top: var(--margin-large) !important;
     background-image: url('bl3.png'); 
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
+    height: 800px;
   }
 
-#bq2{
-    text-align:left;
+#bq1{  
+    text-align:right;
     height: 50%;
     width: 94%;
     padding:4px;
@@ -559,18 +548,20 @@ a.tribute-link:hover {
     font-style: italic;
     font-family: 'Acme',serif;
     color:  rgb(247, 57, 57);
+}
+
+
+#bq2{
+    text-align:left;
+    height: 50%;
+    width: 94%;
+    padding-left: 10%;
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Acme',serif;
+    color:  rgb(247, 57, 57);
     }
 
-#bq1{  
-      text-align:right;
-      height: 50%;
-      width: 94%;
-      padding:4px;
-      font-size: 2em;
-      font-style: italic;
-      font-family: 'Acme',serif;
-      color:  rgb(247, 57, 57);
-}
 
 #bq3{
   text-align:right;
@@ -580,7 +571,7 @@ a.tribute-link:hover {
   font-size: 2em;
   font-style: italic;
   font-family: 'Acme',serif;
-  color:  rgb(10, 0, 0);
+  color:  rgb(247, 57, 57);
   }
 
 
@@ -603,6 +594,13 @@ blockquote:after {
 blockquote p {
     display: inline;
     }
+
+
+#img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #img-div1,#img-div2
     {
