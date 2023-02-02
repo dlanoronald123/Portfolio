@@ -158,15 +158,53 @@
 
 // Unique("asdfgh");
 
-function FirstRecurringCharacter(arr){
-    for (i = 0; i < arr.length; i++) {
-      if (arr.indexOf(arr[i]) !== i) {
-        return arr[i];
-      }
-    }
-    return null;
-  };
+// function FirstRecurringCharacter(arr){
+//     for (i = 0; i < arr.length; i++) {
+//       if (arr.indexOf(arr[i]) !== i) {
+//         return arr[i];
+//       }
+//     }
+//     return null;
+//   };
      
-   console.log(FirstRecurringCharacter(['A','B','C']))
-   console.log(FirstRecurringCharacter(['B','C','D','A','B']))
-   console.log(FirstRecurringCharacter(['B','C','A','B','A']))
+//    console.log(FirstRecurringCharacter(['A','B','C']))
+//    console.log(FirstRecurringCharacter(['B','C','D','A','B']))
+//    console.log(FirstRecurringCharacter(['B','C','A','B','A']))
+
+// function SearchingChallenge(str) {
+//   let longest = "";
+//   for (let i = 0; i < str.length; i++) {
+//       for (let j = i + 1; j <= str.length; j++) {
+//           let substring = str.slice(i, j);
+//           if (substring === substring.split("").reverse().join("") && substring.length > longest.length) {
+//               longest = substring;
+//           }
+//       }
+//   }
+
+//   if(longest.length>2) {
+//       let ChallengeToken = "4wtlqjfrb3";
+//       for (let i = 0; i < ChallengeToken.length; i++) {
+//           let char = ChallengeToken[i];
+//           longest = longest.replace(new RegExp(char, "g"), "--" + char + "--");
+//       }
+//       return longest;
+//   } else {
+//       return "none";
+//   }
+// }
+
+// console.log(SearchingChallenge("hellosannasmith"))
+
+
+function StringChallenge(str) {
+  let time1 = new Date("1970-01-01 " + str.split("-")[0]);
+  let time2 = new Date("1970-01-01 " + str.split("-")[1]);
+  if(time2 < time1) {
+      time2.setDate(time2.getDate() + 1);
+  }
+  let diff = (time2 - time1) / 60000;
+  return diff;
+}
+
+console.log(StringChallenge("12:30pm-12:00am"))
