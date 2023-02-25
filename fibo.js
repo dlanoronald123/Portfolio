@@ -1,21 +1,20 @@
 // function fibonnacci(n){
 //   let arr = [0,1]
 //   for (let i=2; i<n; i++){
-//     arr.push(arr[i-1] + arr[i-2]) // 2,1 
+//     arr.push(arr[i-1] + arr[i-2]) // 2,1
 //   }
 //   console.log(arr[n-1])
 // }
 // fibonnacci(8)
 
-function fibo(n){
+function fibo(n) {
   if (n < 3) {
-    return n - 1
+    return n - 1;
   } else {
-    return fibo(n - 1) + fibo(n - 2)
+    return fibo(n - 1) + fibo(n - 2);
   }
 }
-console.log(fibo(6))
-
+console.log(fibo(6));
 
 // const init = {
 //   1:0,
@@ -30,17 +29,17 @@ console.log(fibo(6))
 // }
 // console.log(fib(8))
 
-function fibo(n){
-    let a = 0;
-    let b = 1;
-    while (n > 1){
-      [a,b] = [b, a + b];
-      n -= 1;
-    }
-    return a;
+function fibo(n) {
+  let a = 0;
+  let b = 1;
+  while (n > 1) {
+    [a, b] = [b, a + b];
+    n -= 1;
   }
-  
-console.log(fibo(8))
+  return a;
+}
+
+console.log(fibo(6));
 
 // function fibon(n){
 //     let arr = [0,1]
@@ -58,19 +57,18 @@ console.log(fibo(8))
 // console.log(fibon(8))
 
 const Fibo = (num) => {
-    const arr = [0,1]
-    for (let i = 2; i < num; i++){
-        let a = arr[i-1]
-        let b = arr[i-2] 
-        arr.push(a + b)
-    }
-    // return arr[num];
-    return arr
-}
+  const arr = [0, 1];
+  for (let i = 2; i < num; i++) {
+    let a = arr[i - 1];
+    let b = arr[i - 2];
+    arr.push(a + b);
+  }
+  // return arr[num];
+  return arr;
+};
 
-console.log(Fibo(8));
+console.log(Fibo(6));
 
-  
 // const Sum = (arr) => {
 //     let sum = 0;
 //     arr.forEach(elem => {
@@ -82,9 +80,38 @@ console.log(Fibo(8));
 // const arr = [2,2,2,1]
 // console.log(Sum(arr))
 
-
-
 // const compose = (a,b) => (data) => a(b(data));
 // const final = compose(Sum,Fibo)
 
 // console.log(final(10))
+
+// function* fib() {
+//   let a = 0, b = 1;
+//   while (true) {
+//     yield a;
+//     [a, b] = [b, a + b];
+//   }
+// }
+
+// function getFibonacciNumber(n) {
+//   const fibGenerator = fib();
+//   for (let i = 0; i < n; i++) {
+//     fibGenerator.next();
+//   }
+//   return fibGenerator.next().value;
+// }
+
+// getFibonacciNumber(8)
+
+// function fib(n) {
+//   if (n <= 1) {
+//     return n;
+//   }
+//   let prev1 = 0, prev2 = 1, current;
+//   for (let i = 2; i <= n; i++) {
+//     current = prev1 + prev2;
+//     prev1 = prev2;
+//     prev2 = current;
+//   }
+//   return current;
+// }

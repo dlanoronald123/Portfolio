@@ -1,4 +1,4 @@
-//Reverse a String 
+//Reverse a String
 
 // const rev = (string) => {
 //   const arr = string.split("");
@@ -17,13 +17,15 @@
 //   });
 // })("Sample!");
 
-//Palindrome 
 // Reverse the string
 // Check orig string if they are the same
 // const Palindrome = (str) => {
-//   const isPalindrome = str.split("").reverse().join("");
-//   console.log(str === isPalindrome);
-// }
+//   const isPalindrome = str.reverse();
+//   console.log(isPalindrome);
+//   console.log(str == isPalindrome);
+// };
+
+// Palindrome([1, 2, 2, 1]);
 
 // (function (str){
 //   let reversed = '';
@@ -33,7 +35,7 @@
 //   console.log(str===reversed)
 // })("Sample")
 
-// var i = 0 
+// var i = 0
 // while (i < 10){
 //     i = i + 1
 //     if (i % 2 == 0){
@@ -42,7 +44,7 @@
 //     }
 // }
 
-// var i = 0 
+// var i = 0
 // while (i < 10){
 //     i = i + 1
 //     console.log(i)
@@ -63,7 +65,7 @@
 //HeloWorld!=
 
 // let n = 5
-// let i = 1 
+// let i = 1
 // let j = 1
 // let k = 1
 // for (i in n){
@@ -112,12 +114,12 @@
 //             console.log("FizzBuzz");
 //             i++;
 //         }
-//         if (i % 3 === 0) 
+//         if (i % 3 === 0)
 //         {
 //             console.log("Fizz");
 //             i++;
-//         } 
-//         else (i % 5 === 0) 
+//         }
+//         else (i % 5 === 0)
 //         {
 //             console.log("Buzz");
 //             i++;
@@ -134,15 +136,15 @@
 // const result=(arr,n)=>{
 //     let currentlength = arr.length;
 //     let findResult=[];
-    
+
 //     while( currentlength > n){
 //       let chunkArr=arr.splice(0,n)
 //       currentlength= arr.length
 //       findResult.push(chunkArr)
 //     }
-//     findResult.push(arr) // push remaining part if existing 
+//     findResult.push(arr) // push remaining part if existing
 //     console.log(findResult)
-    
+
 //   }
 //   result([1,3,5,6,3,7,9],3)
 //   result([10,3,15,6,3,7,9,0,2,6,4],4)
@@ -151,7 +153,7 @@
 // function Unique(str) {
 //     const obj = {};
 //     for (let i of str)
-//         (!obj[i]) ? obj[i]=1: obj[i]++; 
+//         (!obj[i]) ? obj[i]=1: obj[i]++;
 //         for(let j in obj)
 //         (obj[j] > 1)? console.log(false) : console.log(true);
 // }
@@ -166,7 +168,7 @@
 //     }
 //     return null;
 //   };
-     
+
 //    console.log(FirstRecurringCharacter(['A','B','C']))
 //    console.log(FirstRecurringCharacter(['B','C','D','A','B']))
 //    console.log(FirstRecurringCharacter(['B','C','A','B','A']))
@@ -196,15 +198,118 @@
 
 // console.log(SearchingChallenge("hellosannasmith"))
 
+// function StringChallenge(str) {
+//   let time1 = new Date("1970-01-01 " + str.split("-")[0]);
+//   let time2 = new Date("1970-01-01 " + str.split("-")[1]);
+//   if (time2 < time1) {
+//     time2.setDate(time2.getDate() + 1);
+//   }
+//   let diff = (time2 - time1) / 60000;
+//   return diff;
+// }
 
-function StringChallenge(str) {
-  let time1 = new Date("1970-01-01 " + str.split("-")[0]);
-  let time2 = new Date("1970-01-01 " + str.split("-")[1]);
-  if(time2 < time1) {
-      time2.setDate(time2.getDate() + 1);
-  }
-  let diff = (time2 - time1) / 60000;
-  return diff;
-}
+// console.log(StringChallenge("12:30pm-12:00am"));
 
-console.log(StringChallenge("12:30pm-12:00am"))
+// console.log("First");
+// setTimeout(function () {
+//   console.log("second");
+// }, 0);
+// console.log("third");
+
+// var addTwoNumbers = function (l1, l2) {
+//   const arr1 = Number(l1.reverse().join(""));
+//   const arr2 = Number(l2.reverse().join(""));
+
+//   let sum = arr1 + arr2;
+//   let final = Array.from(String(sum), Number);
+
+//   console.log(sum);
+//   console.log(final);
+// };
+
+// addTwoNumbers([2, 4, 3], [5, 6, 4]);
+
+// var plusOne = function (digits) {
+//   let last = digits.pop();
+//   let add = last + 1;
+//   digits.push(add);
+//   console.log(add);
+//   console.log(digits.join(""));
+// };
+
+// plusOne([1, 2, 3, 4, 5]);
+
+// var addToArrayForm = function (num, k) {
+//   num = num.join("");
+//   let sum = String(BigInt(num) + BigInt(k)).split("");
+//   console.log(sum);
+// };
+
+// addToArrayForm(
+//   [1, 2, 6, 3, 0, 7, 1, 7, 1, 9, 7, 5, 6, 6, 4, 4, 0, 0, 6, 3],
+//   516
+// );
+
+// var sorted = (nums) => {
+//   return nums.map((i) => i * i).sort((a, b) => a - b);
+// };
+
+// console.log(sorted([[-7, -3, 2, 3, 11]]));
+
+// var mergeTwoLists = function (s) {
+//   let arr = s.split(" ");
+//   let word = arr[arr.length - 1];
+//   return word.length;
+// };
+
+// mergeTwoLists("luffy is still joyboy");
+
+// const number = () => {
+//   let num = {
+//     value: 100,
+//     valueOf: function () {
+//       let current = this.value;
+//       this.value += 100;
+//       return current;
+//     },
+//   };
+
+//   if (num == 100 && num == 200 && num == 300) {
+//     console.log("it works!");
+//   }
+// };
+
+// number();
+
+// var x = 1;
+// var y = (function () {
+//   var z = 0;
+//   console.log(x);
+//   return function (x) {
+//     return (z += 1) * x;
+//   };
+// })();
+// console.log(y(2));
+// console.log(y(2));
+// console.log(y(2));
+// console.log(y(2));
+
+// function fib(n) {
+//   if (n <= 1) {
+//     return n;
+//   }
+
+//   let fibNMinus2 = 0;
+//   let fibNMinus1 = 1;
+//   let fibN = 0;
+
+//   for (let i = 2; i <= n; i++) {
+//     fibN = fibNMinus1 + fibNMinus2;
+//     fibNMinus2 = fibNMinus1;
+//     fibNMinus1 = fibN;
+//   }
+
+//   console.log(fibN);
+// }
+
+// fib(8);
